@@ -10,7 +10,7 @@
         <span class="badge badge-secondary">{{ book.rating }}</span>
       </h2>
     </div>
-    <p>Preis: {{ book.price }}</p>
+    <p>Preis: {{ book.price | currency:'EUR' }}</p>
     <p>{{ book.description }}</p>
 
     <div>
