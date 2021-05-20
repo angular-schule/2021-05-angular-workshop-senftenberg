@@ -16,3 +16,4 @@ export class BookRatingService {
     return book; // TODO
   }
 }
+
