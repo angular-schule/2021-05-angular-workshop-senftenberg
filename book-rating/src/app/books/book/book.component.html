@@ -12,5 +12,9 @@
     </div>
     <p>Preis: {{ book.price }}</p>
     <p>{{ book.description }}</p>
+
+    <div>
+      <span *ngFor="let x of getStars()">⭐️</span>
+    </div>
   </div>
 </div>
