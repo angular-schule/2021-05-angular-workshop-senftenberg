@@ -18,6 +18,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
   ],
   exports: [
     DashboardComponent // Dashboard exportieren, damit es in AppComponent sichtbar ist
+  ],
+  providers: [
+    
   ]
 })
 export class BooksModule { }
