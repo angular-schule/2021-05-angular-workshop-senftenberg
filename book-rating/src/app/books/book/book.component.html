@@ -1,4 +1,4 @@
-<div class="card mb-4" *ngIf="book">
+<div class="card mb-4" *ngIf="book" [id]="'book-' + book.isbn">
   <div class="card-body bg-light">
     <img
       class="img-thumbnail float-right"
@@ -19,6 +19,7 @@
 
     <button class="btn btn-success mr-2" (click)="doRateUp()"> + </button>
     <button class="btn btn-danger mr-2" (click)="doRateDown()"> – </button>
+    <a [routerLink]="['/books', book.isbn]">Details</a>
   </div>
 </div>
 
