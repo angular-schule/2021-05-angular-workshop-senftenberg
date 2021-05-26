@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, from, timer, interval, ReplaySubject } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, take } from 'rxjs/operators';
 
 @Component({
   selector: 'rxw-creating',
@@ -23,6 +23,42 @@ export class CreatingComponent implements OnInit {
 
     /******************************/
 
+    /*function producer(o) {
+      const result = 1+1;
+      o.next(result);
+      o.next(3);
+      o.next(4);
+
+      setTimeout(() => o.next(7), 2000);
+      setTimeout(() => o.complete(), 4000);
+    }
+
+    const observer = {
+      next: e => console.log(e),
+      error: err => console.error(err),
+      complete: () => console.log('C')
+    };
+
+    // producer(obs);
+
+    const myObs$ = new Observable(producer);
+    myObs$.subscribe(observer);*/
+
+    timer(1000, 500).pipe(
+      // take(5),
+      map(value => value * 3),
+      filter(value => value % 2 === 0)
+    ).subscribe({
+      next: value => this.log(value),
+      error: err => this.log(err),
+      complete: () => this.log('COMPLETE'),
+    });
+
+    /*setTimeout(() => {
+      sub.unsubscribe();
+    }, 5000);*/
+    
+    
     
     /******************************/
   }
