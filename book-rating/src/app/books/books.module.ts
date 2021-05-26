@@ -8,7 +8,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { BookFormComponent } from './book-form/book-form.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     BooksRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   exports: [
     DashboardComponent // Dashboard exportieren, damit es in AppComponent sichtbar ist
