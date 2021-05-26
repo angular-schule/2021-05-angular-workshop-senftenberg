@@ -1,6 +1,5 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import {  FormControl, FormGroup, Validators } from '@angular/forms';
 import { Book } from '../shared/book';
 
 @Component({
@@ -34,12 +33,16 @@ export class BookFormComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.submitForm();
-  }
+  ngOnInit(): void {}
 
   submitForm() {
-    this.submitBook.emit(); // TODO: Buch erzeugen
+    if (this.bookForm.invalid) {
+      this.bookForm.markAllAsTouched();
+      return;
+    }
+
+    const newBook: Book = this.bookForm.value;
+    this.submitBook.emit(newBook);
   }
 
   isInvalid(controlName: string): boolean {
