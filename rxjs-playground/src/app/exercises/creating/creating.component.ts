@@ -23,7 +23,7 @@ export class CreatingComponent implements OnInit {
 
     /******************************/
 
-    /*function producer(o) {
+    function producer(o) {
       const result = 1+1;
       o.next(result);
       o.next(3);
@@ -42,7 +42,7 @@ export class CreatingComponent implements OnInit {
     // producer(obs);
 
     const myObs$ = new Observable(producer);
-    myObs$.subscribe(observer);*/
+    myObs$.subscribe(observer);
 
     timer(1000, 500).pipe(
       // take(5),

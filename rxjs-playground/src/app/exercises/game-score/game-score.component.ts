@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, ReplaySubject } from 'rxjs';
+import { Subject, ReplaySubject, of } from 'rxjs';
 import { scan, reduce } from 'rxjs/operators';
 
 @Component({
@@ -31,6 +31,29 @@ export class GameScoreComponent implements OnInit {
       reduce((acc, item) => acc + item, 0)
     ).subscribe(score => this.finalScore = score);
     
+    /******************************/
+
+
+      of(
+        // { type: 'SETNAME', payload: 'Ferdinand' },
+        'SETNAMEFERDINAND',
+        'SETCITYLEIPZIG',
+        'SETFRMEWORKNG',
+        'SETNAMEJUERGEN',
+        'FOOBAR'
+      ).pipe(
+        scan((acc, msg) => {
+          switch (msg) {
+            case 'SETNAMEFERDINAND': return { ...acc, name: 'Ferdinand' };
+            case 'SETCITYLEIPZIG': return { ...acc, city: 'Leipzig' };
+            case 'SETNAMEJUERGEN': return { ...acc, name: 'Jürgen' };
+            case 'SETNAMESTEFFI': return { ...acc, name: 'Steffi' };
+            default: return acc;
+          }
+        }, { name: 'Franziska', city: 'Berlin' })
+      ).subscribe(e => console.log(e))
+
+
     /******************************/
 
     this.score$.subscribe({
