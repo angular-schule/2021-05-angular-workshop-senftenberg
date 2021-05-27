@@ -10,8 +10,7 @@
       ],
       "parserOptions": {
         "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
+          "tsconfig.json"
         ],
         "createDefaultProgram": true
       },
@@ -48,5 +47,11 @@
       ],
       "rules": {}
     }
+  ],
+  "plugins": [
+    "ngrx"
+  ],
+  "extends": [
+    "plugin:ngrx/recommended"
   ]
 }

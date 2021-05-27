@@ -1,7 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { Book } from '../shared/book';
 import { BookRatingService } from '../shared/book-rating.service';
 import { BookStoreService } from '../shared/book-store.service';
+import { loadBooks } from '../store/book.actions';
+import { selectAllBooks } from '../store/book.selectors';
 
 @Component({
   selector: 'br-dashboard',
@@ -12,14 +15,19 @@ export class DashboardComponent implements OnInit {
 
   books: Book[] = [];
 
-  constructor(private rs: BookRatingService, private bs: BookStoreService) {}
+  constructor(private rs: BookRatingService, private bs: BookStoreService, private store: Store) {}
 
   ngOnInit(): void {
-    this.bs.getAll().subscribe(books => this.books = books);
+    // this.bs.getAll().subscribe(books => this.books = books);
+    this.store.dispatch(loadBooks()); // Action auslösen, Laden starten
+
+    const books$ = this.store.select(selectAllBooks); // store.pipe(select(.....))
+    books$.subscribe(books => this.books = books); // TODO: AsyncPipe
 
 
-    this.bs.getSomeBooks(['9783864907791', '9783960091417', '9783864907845'])
-      .subscribe(books => console.log('SOME', books))
+
+    // this.bs.getSomeBooks(['9783864907791', '9783960091417', '9783864907845'])
+      // .subscribe(books => console.log('SOME', books))
   }
 
   doRateUp(book: Book): void {
