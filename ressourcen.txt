@@ -1,0 +1,50 @@
+https://stephen-knutter.github.io/2020-02-01-setup-angular-typescript-alias/
+
+https://angular.io/
+https://indepth.dev/angular
+https://blog.angular.io/
+
+https://nx.dev/
+https://go.nrwl.io/angular-enterprise-monorepo-patterns-new-book
+
+https://twitter.com/fmalcher01/status/1226974899073404934
+
+https://www.google.com/search?q=two+unit+tests+no+integration+tests
+https://jestjs.io
+https://www.cypress.io/
+https://angular.io/guide/testing#configure-cli-for-ci-testing-in-chrome
+https://www.npmjs.com/package/ts-mockito
+
+https://angular.io/api/core/forwardRef
+https://doesitmutate.xyz/
+https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
+
+https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
+https://www.digitalocean.com/community/tutorials/angular-bundle-size
+https://github.com/angular-eslint/angular-eslint
+Builder mit eigener Webpack-Config: https://www.npmjs.com/package/@angular-builders/custom-webpack
+
+https://angular.schule/blog/2018-04-swagger-codegen
+https://www.youtube.com/watch?v=rarXH1OHpFY
+
+https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
+https://nestjs.com/
+https://angular.io/api/platform-browser/Title
+https://angular.io/api/core/ErrorHandler
+https://eslint.org/docs/rules/no-var
+
+https://rxmarbles.com/
+https://angular.schule/blog/2020-02-rxjs-train-window
+https://angular.schule/blog/2019-11-ngx-semantic-version
+https://blog.strongbrew.io/safe-http-calls-with-rxjs/
+https://angular.schule/blog/2018-02-rxjs-own-log-operator
+
+Projekt mit viel NgRx: https://github.com/intershop/intershop-pwa
+
+https://ngrx.io/guide/component-store
+
+Vertiefung NgRx:
+https://www.youtube.com/watch?v=f2lfkWRgMl4 (de)
+https://www.youtube.com/watch?v=_UfGIjoxlhs (en)
+
+Feedbackformular: https://bit.ly/ng-senftenberg0521
